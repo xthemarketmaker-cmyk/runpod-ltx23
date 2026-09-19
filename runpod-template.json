@@ -1,0 +1,23 @@
+{
+  "name": "video-pipeline-ltx23",
+  "imageName": "ghcr.io/xthemarketmaker-cmyk/runpod-ltx23:v1",
+  "category": "NVIDIA",
+  "containerDiskInGb": 60,
+  "dockerEntrypoint": [],
+  "dockerStartCmd": [],
+  "env": {
+    "ALBUM": "the-frozen-crypt",
+    "WIDTH": "1920",
+    "HEIGHT": "1080",
+    "FRAMES": "121",
+    "RUN_BATCH": "true"
+  },
+  "isPublic": false,
+  "isServerless": false,
+  "ports": [
+    "8188/http"
+  ],
+  "readme": "ComfyUI + LTX-2.3 video clip generation. Boots ComfyUI on :8188, downloads ungated LTX-2.3 weights to the volume, runs the batch for ALBUM, writes /workspace/clips-<album>.tar.gz. Set WIDTH/HEIGHT to 3840/2160 for 4K.",
+  "volumeInGb": 120,
+  "volumeMountPath": "/workspace"
+}
